@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>RunningON1234</title>
+		<title>RunningON</title>
 		<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
 		<link href="/resources/SHB/css/index.css" rel="stylesheet">
 		<link href="/resources/SHB/css/board.css" rel="stylesheet">
