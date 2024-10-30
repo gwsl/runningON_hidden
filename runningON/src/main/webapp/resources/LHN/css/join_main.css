@@ -70,7 +70,9 @@ body {
 .photo_table {
 	margin: 0 auto;
 	display: grid;
-	grid-template-areas: "photo1 photo2 photo3" "photo4 photo5 photo6"
+	grid-template-areas:
+		"photo1 photo2 photo3"
+		"photo4 photo5 photo6"
 		"photo7 photo8 photo9";
 	grid-gap: 15px;
 }
