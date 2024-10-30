@@ -3,22 +3,21 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
-	rel="stylesheet">
-<link rel="stylesheet" href="resources/LHN/css/summernote-lite.css">
 <meta charset="UTF-8">
 <title>모임 생성</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+<link rel="stylesheet" href="resources/LHN/css/summernote-lite.css">
+<link rel="stylesheet" href="/resources/LHN/css/groupstart.css">
 <!-- 
-			설명:
-               onchange="submitForm()": 
-              드롭다운에서 선택이 변경될 때 submitForm() 함수를 호출합니다.
-               submitForm(): 이 함수는 폼을 자동으로 제출합니다.
-              your_action_page.jsp: 폼의 action 속성에 
-              원하는 페이지 URL을 넣어야 합니다.
-               이렇게 하면 사용자가 드롭다운에서 옵션을 선택할 때마다 
-               자동으로 폼이 제출됩니다.
-			 -->
-<link href="/resources/LHN/css/groupstart.css" rel="stylesheet">
+		설명:
+	onchange="submitForm()": 
+	드롭다운에서 선택이 변경될 때 submitForm() 함수를 호출합니다.
+	submitForm(): 이 함수는 폼을 자동으로 제출합니다.
+	your_action_page.jsp: 폼의 action 속성에 
+	원하는 페이지 URL을 넣어야 합니다.
+	이렇게 하면 사용자가 드롭다운에서 옵션을 선택할 때마다 
+	자동으로 폼이 제출됩니다.
+ -->
 <script>
 	function submitForm() {
 		document.getElementById("groupForm").submit();
@@ -27,7 +26,7 @@
 </head>
 <body>
 	<form id="groupForm" method="post" enctype="multipart/form-data"
-		action="#">
+		action="/group_board">
 		<div>
 			<div class="form-container">
 				<ul>
