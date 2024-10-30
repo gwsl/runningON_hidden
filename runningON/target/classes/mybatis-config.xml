@@ -27,7 +27,7 @@
 		<mapper resource="mappers/admin_mapper.xml" />
 		<mapper resource="mappers/boards_mapper.xml" />
 		<mapper resource="mappers/groups_mapper.xml" />
-		<mapper resource="mappers/main_mapper.xml" />
+		<mapper resource="mappers/homepage_mapper.xml" />
 		<mapper resource="mappers/mypage_mapper.xml" />
 		<mapper resource="mappers/posts_mapper.xml" />
 	</mappers>
