@@ -58,14 +58,22 @@ public class BoardsDAOImpl implements BoardsDAO{
 	}
 
 	@Override
-	public List<PostsVO> getPostsList(String board_idx, int offset, int limit) {
-		Map<String, Object> map = new HashMap<>();
-		map.put("board_idx", board_idx);
+	public List<PostsVO> getPostsList(int offset, int limit) {
+		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("limit", limit);
 		map.put("offset", offset);
 		
 		return sqlSessionTemplate.selectList("boards.pageList", map);
 	}
+//	@Override
+//	public List<PostsVO> getPostsList(String board_idx, int offset, int limit) {
+//		Map<String, Object> map = new HashMap<>();
+//		map.put("board_idx", board_idx);
+//		map.put("limit", limit);
+//		map.put("offset", offset);
+//		
+//		return sqlSessionTemplate.selectList("boards.pageList", map);
+//	}
 
 	@Override
 	public List<CommentsVO> getCommList(String post_idx) {

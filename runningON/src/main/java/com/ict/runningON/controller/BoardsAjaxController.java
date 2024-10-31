@@ -55,7 +55,8 @@ public class BoardsAjaxController {
 	    }
 
 	    // DB에서 데이터 가져오기
-	    List<PostsVO> list = boardsService.getPostsList(board_idx, paging.getOffset(), paging.getNumPerPage());
+		List<PostsVO> list = boardsService.getPostsList(paging.getOffset(), paging.getNumPerPage());
+	//	List<PostsVO> list = boardsService.getPostsList(board_idx, paging.getOffset(), paging.getNumPerPage());
 
 	    map.put("list", list);
 	    map.put("paging", paging);
