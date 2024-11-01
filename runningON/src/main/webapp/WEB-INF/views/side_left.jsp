@@ -12,10 +12,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/views/top.jsp" />
-		<div id="layout">
-			<jsp:include page="/WEB-INF/views/side_left.jsp" />
-			<!-- 심현보가 할거임 스크립트 사용해서 공지사항 불러오기 -->
+		<div class="daily_weather">
+			<h2><a href="/weather">날씨</a></h2>
+			<p>날씨 정보..</p>
+			<p>날씨 정보..</p>
+			<p>날씨 정보..</p>
+			<p>날씨 정보..</p>
 		</div>
 	</body>
 </html>
