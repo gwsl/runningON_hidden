@@ -1,23 +1,13 @@
 @charset "UTF-8";
 
-#side_left{
-	width: 20%;
-	min-width: 300px;
-}
-
 #main_page {
-	width: 80%; /* 전체의 나머지 80% 너비로 설정 */
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin: 0 20px;
-}
-
-.body {
-    min-width: 1100px;
-    /* display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f9f4ed;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; */
+    height: 100vh;
+    margin: 0; 
   }
   .container {
     width: 300px;
@@ -25,7 +15,6 @@
     border-radius: 8px;
     padding: 20px;
     background-color: white;
-	margin: 40px 40px;
   }
   .container div {
     display: flex;
@@ -41,10 +30,9 @@
     flex-direction: column;
     align-items: center;
   }
-  .profile-picture .circle {
-    width: 60px;
-    height: 60px;
-    background-color: #ddd;
+  .profile-picture .circle img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
   }

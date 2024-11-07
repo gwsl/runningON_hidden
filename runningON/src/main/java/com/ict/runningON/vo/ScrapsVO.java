@@ -4,7 +4,7 @@ public class ScrapsVO {
 	private String scrap_idx,
 	user_id,
 	post_idx,
-	scarped_at;
+	scraped_at;
 
 	public String getScrap_idx() {
 		return scrap_idx;
@@ -30,13 +30,12 @@ public class ScrapsVO {
 		this.post_idx = post_idx;
 	}
 
-	public String getScarped_at() {
-		return scarped_at;
+	public String getScraped_at() {
+		return scraped_at;
 	}
 
-	public void setScarped_at(String scarped_at) {
-		this.scarped_at = scarped_at;
+	public void setScraped_at(String scraped_at) {
+		this.scraped_at = scraped_at;
 	}
-	
 	
 }

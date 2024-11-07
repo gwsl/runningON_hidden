@@ -5,8 +5,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<!-- property-placeholder 설정 => properties 파일 위치 지정 : Namespaces 에서context 선택 -->
-	<context:property-placeholder location="classpath:props/jdbc.properties" />	
+	<!-- property-placeholder 설정 => properties 파일 위치 지정 : Namespaces 에서 context 선택 -->
+	<context:property-placeholder location="classpath:props/jdbc.properties" />
 	
 	<!-- DB접속 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
@@ -22,20 +22,20 @@
 		<!-- 커넥션 풀에 반납할 때 최소로 유지되는 커넥션의 수 -->
 		<property name="minIdle" value="${jdbc.minIdle}" />
 	</bean>
-	
+		
+		
 	<!-- mybatis config (config 위치)-->
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:mybatis-config.xml" />
+		<property name="configLocation" value="classpath:mybatis-config.xml"/>
 	</bean>
 	
-	<!-- MyBatis에서 실제로 실행하는클래스 -->
+	<!-- 실제로 실행하는 클래스 -->
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactoryBean" />
 	</bean>
 	
-	<!-- 트랜젝션 처리 -->
-	
+	<!-- 트렌젝션 처리 -->
+		
 	<!-- DAO는 어노테이션 -->
-	
 </beans>

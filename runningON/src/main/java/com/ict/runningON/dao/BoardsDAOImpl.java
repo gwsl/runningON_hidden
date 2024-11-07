@@ -59,7 +59,6 @@ public class BoardsDAOImpl implements BoardsDAO{
 
 	@Override
 	public List<PostsVO> getPostsList(int offset, int limit, String board_idx, String desc) {
-		System.out.println(desc);
 		Map<String, Object> map = new HashMap<>();
 		map.put("limit", limit);
 		map.put("offset", offset);

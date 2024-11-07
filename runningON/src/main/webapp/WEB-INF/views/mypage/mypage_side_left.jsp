@@ -13,28 +13,28 @@
 <body>
 	<div class="navL">
 		<ul>
-			<li><a class="index_a">마이페이지</a>
+			<li><a href="/my_info">마이페이지</a>
 				<ul id="ul1">
-					<li><a class="index_a" href="/my_info">나의 정보</a></li>
-					<li id="act"><a class="index_a" href="/my_act">나의 활동</a>
+					<li><a href="/my_info">나의 정보</a></li>
+					<li id="act"><a href="/my_act">나의 활동</a>
 						<ul class="ul2" id="act1">
-							<li><a class="index_a" href="/my_act">내가 쓴 게시글</a></li>
-							<li><a class="index_a" href="/my_comment">내가 쓴 댓글</a></li>
-							<li><a class="index_a" href="/my_scrap">스크랩</a></li>
+							<li><a href="/my_act">내가 쓴 게시글</a></li>
+							<li><a href="/my_comment">내가 쓴 댓글</a></li>
+							<li><a href="/my_scrap">스크랩</a></li>
 						</ul>
 					</li>
-					<li id="group"><a class="index_a" href="/view6">나의 모임</a>
+					<li id="group"><a href="/my_join_group">나의 모임</a>
 						<ul class="ul2" id="group2">
-							<li><a class="index_a" href="/view5">내가 만든 모임</a></li> <!-- view5 => my_create_group -->
-							<li><a class="index_a" href="/view6">내가 참여한 모임</a></li><!-- view6 => my_join_group -->
-							<li><a class="index_a" href="/view7">나의 관심 모임</a></li> <!-- view7 => my_interest_group -->
+							<li><a href="/my_create_group">내가 만든 모임</a></li> <!-- view5 => my_create_group -->
+							<li><a href="/my_join_group">내가 참여한 모임</a></li><!-- view6 => my_join_group -->
+							<li><a href="/my_interest_group">나의 관심 모임</a></li> <!-- view7 => my_interest_group -->
 						</ul>
 					</li>
-					<li id="text"><a class="index_a" href="my_msg_receive">나의 쪽지</a>
+					<li id="text"><a href="my_msg_receive">나의 쪽지</a>
 						<ul class="ul2" id="text2">
-							<li><a class="index_a" href="/my_msg_write">쪽지 쓰기</a></li>
-							<li><a class="index_a" href="/my_msg_receive">받은 쪽지</a></li>
-							<li><a class="index_a" href="/my_msg_send">보낸 쪽지</a></li>
+							<li><a href="/my_msg_write">쪽지 쓰기</a></li>
+							<li><a href="/my_msg_receive">받은 쪽지</a></li>
+							<li><a href="/my_msg_send">보낸 쪽지</a></li>
 						</ul>
 					</li>
 				</ul>

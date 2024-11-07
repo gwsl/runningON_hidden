@@ -2,7 +2,60 @@
 <!DOCTYPE mapper
  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="msg">
 
-<mapper namespace="mypage">
+	<select id="sendlist" parameterType="String" resultType="mvo">
+		select * from messages where msg_sender_id = #{user_id} order by msg_idx desc
+	</select>
+	
+	<select id="receivelist" parameterType="String" resultType="mvo">
+		select * from messages where msg_receiver_id = #{user_id} order by msg_idx desc
+	</select>
+	
+	<insert id="sendmsg">
+		insert into messages(msg_sender_id, msg_receiver_id, msg_subject, msg_content, msg_sent_at)
+		values(#{msg_sender_id}, #{msg_receiver_id}, #{msg_subject}, #{msg_content}, now())
+	</insert>
+	
+	<select id="one" parameterType="String" resultType="mvo">
+		select * from messages where msg_idx = #{msg_idx}
+	</select>
+	
+	<select id="info" parameterType="String" resultType="uvo">
+		select * from users where user_id = #{user_id}
+	</select>
+	
+	<update id="info_update" parameterType="uvo">
+		UPDATE users
+	    <set>
+	        <if test="user_profileImg != 'maintain'">
+	            user_profileImg = #{user_profileImg},
+	        </if>
+	        <if test="user_nickName != null">
+	            user_nickName = #{user_nickName}
+	        </if>
+	    </set> where user_id = #{user_id}
+	</update>
+	
+	<select id="write_list" parameterType="String" resultType="pvo">
+		select * from posts where user_id = #{user_id} order by post_idx desc
+	</select>
+	
+	<select id="get_comments" parameterType="String" resultType="Integer">
+		select post_idx from comments where user_id = #{user_id} order by post_idx desc
+	</select>
+	
+	<select id="get_com_posts" resultType="pvo">
+    select * from posts where post_idx in
+    <foreach collection="list" item="item" open="(" separator="," close=")">
+        #{item}
+    </foreach>
+	</select>
+	
+	<select id="get_scraps" parameterType="String" resultType="Integer">
+		select post_idx from scraps where user_id = #{user_id} order by post_idx desc
+	</select>
 	
 </mapper>
+
+	
