@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+#main_page {
+	padding: 50px;
+	
+}
+
 table {
 	width: 100%;
 	border-collapse: collapse;

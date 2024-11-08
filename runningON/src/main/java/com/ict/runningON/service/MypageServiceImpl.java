@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.ict.runningON.dao.MypageDAO;
 import com.ict.runningON.vo.MessagesVO;
 import com.ict.runningON.vo.PostsVO;
+import com.ict.runningON.vo.RunGroupsVO;
 import com.ict.runningON.vo.UsersVO;
 
 @Service
@@ -66,5 +67,19 @@ public class MypageServiceImpl implements MypageService{
 		return mypageDAO.getMyScraps(user_id);
 	}
 
-	
+	@Override
+	public List<PostsVO> getCreateGroup(String user_id) {
+		return mypageDAO.getCreateGroup(user_id);
+	}
+
+	@Override
+	public List<Integer> getJoinGroups(String user_id) {
+		return null;
+	}
+
+	@Override
+	public List<Integer> getMyScrapsGroups(String user_id) {
+		return mypageDAO.getMyScrapsGroups(user_id);
+	}
+
 }

@@ -9,7 +9,25 @@ public class PostsVO {
 		post_views,
 		post_created_at,
 		post_updated_at,
-		post_is_public;
+		post_is_public,
+		group_idx,
+		post_image;
+
+	public String getGroup_idx() {
+		return group_idx;
+	}
+
+	public void setGroup_idx(String group_idx) {
+		this.group_idx = group_idx;
+	}
+
+	public String getPost_image() {
+		return post_image;
+	}
+
+	public void setPost_image(String post_image) {
+		this.post_image = post_image;
+	}
 
 	public String getPost_idx() {
 		return post_idx;

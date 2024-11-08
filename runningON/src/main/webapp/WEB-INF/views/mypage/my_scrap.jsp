@@ -61,7 +61,7 @@
 			<tr>
 				<td class="checkbox"><input type="checkbox"></td>
 				<td>${k.post_idx }</td>
-				<td ><a href="/#?post_idx=${k.post_idx}">${k.post_title}</a></td>
+				<td ><a href="/detail?post_idx=${k.post_idx}">${k.post_title}</a></td>
 				<td>${k.post_created_at}</td>
 				<td>${k.post_views}</td>
 			</tr>
@@ -78,5 +78,18 @@
     -->
 		</div>
 	</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	localStorage.setItem("activeLinkId", "myScrap");
+	$(".navL a").removeClass("active");
+    $(".ul2").removeClass("active-parent");
+
+    // 클릭한 링크에 active 클래스 추가
+    $("#myScrap").addClass("active");
+
+    // 상위 .ul2 요소에 active-parent 클래스 추가
+    $("#myScrap").closest(".ul2").addClass("active-parent");
+});
+</script>
 </body>
 </html>

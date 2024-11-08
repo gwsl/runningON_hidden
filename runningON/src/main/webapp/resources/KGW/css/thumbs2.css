@@ -2,7 +2,7 @@
 
 		#main_page {
 			font-family: Arial, sans-serif;
-			margin: 20px;
+			padding: 50px;
 		} 
 		.profile {
             display: flex;

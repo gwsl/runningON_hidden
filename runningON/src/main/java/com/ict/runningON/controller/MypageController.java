@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ict.runningON.service.MypageService;
 import com.ict.runningON.vo.MessagesVO;
 import com.ict.runningON.vo.PostsVO;
+import com.ict.runningON.vo.RunGroupsVO;
 import com.ict.runningON.vo.UsersVO;
 
 @Controller
@@ -31,7 +32,6 @@ public class MypageController {
 	private MypageService mypageService;
 	
 	
-	// ����������(index)
 //	@GetMapping("/home")
 //	public ModelAndView homePage() {
 //		return new ModelAndView("index");
@@ -86,8 +86,10 @@ public class MypageController {
 		return mv;
 	}
 	@GetMapping("/my_create_group")
-	public ModelAndView view5() {
+	public ModelAndView view5(HttpSession session) {
 		ModelAndView mv = new ModelAndView("mypage/my_create_group");
+		
+		
 		return mv;
 	}
 	@GetMapping("/my_join_group")
@@ -166,7 +168,6 @@ public class MypageController {
 		    uvo.setUser_nickName(nickname);
 		    String path = request.getSession().getServletContext().getRealPath("/resources/upload");
 			
-		    // �̹��� ���� ó��
 	        if (profileImage == null && deleteimage == true) {
 	        	uvo.setUser_profileImg("");
 	        }else if(profileImage == null && deleteimage == false){
@@ -177,11 +178,8 @@ public class MypageController {
 	            uvo.setUser_profileImg(f_name);
 
 	            profileImage.transferTo(new File(path, f_name));
-	            // �ʿ��, �̹��� ���� ��� ���� ���� �߰�
 	        }
 
-	        // ���� ���� ó�� (�ʿ�� DB�� ���� ���� �߰�)
-	        // ��: userService.updateNickname(userId, nickname);
 	        int result = mypageService.updateInfo(uvo);
 	        request.setAttribute("result", result);
 	        

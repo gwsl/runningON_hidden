@@ -6,11 +6,9 @@
 	flex-wrap: wrap;
 	top: 0px;
 	left: 293px;
-	width: calc(100% - 293px);
-	min-width: 900px;
+	width: calc(100% - 393px);
+	min-width: 650px;
 }
-
-
 
 a{
 	text-decoration: none; /* -- 밑줄 없어짐 */

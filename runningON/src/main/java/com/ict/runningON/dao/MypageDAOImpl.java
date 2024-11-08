@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.ict.runningON.vo.MessagesVO;
 import com.ict.runningON.vo.PostsVO;
+import com.ict.runningON.vo.RunGroupsVO;
 import com.ict.runningON.vo.UsersVO;
 
 @Repository
@@ -66,4 +67,20 @@ public class MypageDAOImpl implements MypageDAO{
 	public List<Integer> getMyScraps(String user_id) {
 		return sqlSessionTemplate.selectList("msg.get_scraps", user_id);
 	}
+
+	@Override
+	public List<PostsVO> getCreateGroup(String user_id) {
+		return sqlSessionTemplate.selectList("msg.get_create_group", user_id);
+	}
+
+	@Override
+	public List<Integer> getJoinGroups(String user_id) {
+		return sqlSessionTemplate.selectList("msg.get_join_groups", user_id);
+	}
+
+	@Override
+	public List<Integer> getMyScrapsGroups(String user_id) {
+		return sqlSessionTemplate.selectList("msg.get_scraps_5", user_id);
+	}
+
 }

@@ -38,7 +38,7 @@
 	</update>
 	
 	<select id="write_list" parameterType="String" resultType="pvo">
-		select * from posts where user_id = #{user_id} order by post_idx desc
+		select * from posts where user_id = #{user_id} and board_idx != 5 order by post_idx desc
 	</select>
 	
 	<select id="get_comments" parameterType="String" resultType="Integer">
@@ -46,15 +46,29 @@
 	</select>
 	
 	<select id="get_com_posts" resultType="pvo">
-    select * from posts where post_idx in
-    <foreach collection="list" item="item" open="(" separator="," close=")">
-        #{item}
-    </foreach>
+    	select * from posts where post_idx in
+    	<foreach collection="list" item="item" open="(" separator="," close=")">
+        	#{item}
+   		</foreach>
 	</select>
 	
 	<select id="get_scraps" parameterType="String" resultType="Integer">
-		select post_idx from scraps where user_id = #{user_id} order by post_idx desc
+		select post_idx from scraps where user_id = #{user_id} and board_idx != 5 order by post_idx desc
 	</select>
+	
+	<select id="msg.get_create_group" parameterType="String" resultType="pvo">
+		select * from posts where user_id = #{user_id} and board_idx = 5 order by post_idx desc
+	</select>
+	
+	<select id="get_group" resultType="Integer">
+		select group_idx from group_join where user_id = #{user_id}
+	</select>
+	
+	<select id="get_scraps_5" parameterType="String" resultType="Integer">
+		select post_idx from scraps where user_id = #{user_id} and board_idx = 5 order by post_idx desc
+	</select>
+	
+	
 	
 </mapper>
 

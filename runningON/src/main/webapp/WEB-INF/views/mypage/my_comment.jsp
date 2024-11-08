@@ -77,5 +77,18 @@
 	        <button class="write-button">글쓰기</button>
 	    </div>
     -->
+<script type="text/javascript">
+$(document).ready(function() {
+	localStorage.setItem("activeLinkId", "myComments");
+	$(".navL a").removeClass("active");
+    $(".ul2").removeClass("active-parent");
+
+    // 클릭한 링크에 active 클래스 추가
+    $("#myComments").addClass("active");
+
+    // 상위 .ul2 요소에 active-parent 클래스 추가
+    $("#myComments").closest(".ul2").addClass("active-parent");
+});
+</script>
 </body>
 </html>

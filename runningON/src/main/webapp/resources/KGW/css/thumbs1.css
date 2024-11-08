@@ -1,14 +1,16 @@
 @charset "UTF-8";
 
-#main_page {
+  #main_page {
     font-family: Arial, sans-serif;
-    background-color: #f9f4ed;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    margin: 0; 
+    padding: 50px; 
   }
+  .bottom {
+  	background-color: #f9f4ed;
+  }
+  
   .container {
     width: 300px;
     border: 1px solid #ddd;
